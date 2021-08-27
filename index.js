@@ -1,16 +1,20 @@
 const fs = require("fs");
 
-fs.mkdir("test", () => {
+fs.mkdir("importMd", () => {
   console.log("created...");
 });
 
-fs.writeFile("test/bio.txt", "welcome", (err, data) => {
+fs.writeFile("importMd/index", "welcome", (err, data) => {
   console.log(data);
 });
 
-fs.appendFile("test/bio.txt", " shiraz", (err, data) => {
-  console.log("data");
-});
+// fs.rename("importMd/index", "importMd/index.js", (err) => {
+//   console.log(err);
+// });
+
+// fs.appendFile("test/bio.txt", " shiraz", (err, data) => {
+//   console.log("data");
+// });
 
 // fs.readFile("test/bio.txt", "utf-8", (err, data) => {
 //   console.log(data);
