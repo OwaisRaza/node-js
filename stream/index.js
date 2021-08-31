@@ -6,6 +6,10 @@ const server = http.createServer();
 server.on("request", (req, res) => {
   const readStream = fs.createReadStream("input.txt");
 
+  // using pipe method best way
+  //   readStream.pipe(res);
+
+  // without using pipe
   readStream.on("data", (chunk) => {
     res.write(chunk);
   });
